@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title%} register{% endblock%}
+{% block content%}
+    <form method="post" action="{% url 'register_backend'%}">
+        {% csrf_token %}
+      <div class="b">
+        <label>Firstname</label>
+        <input type="text"  name="first_name" placeholder="firstname">
+        <label>Lastname</label>
+        <input type="text"  name="last_name" placeholder="lastname">
+        <label>Username</label>
+        <input type="text"  name="user_name" placeholder="username">
+        <label>Eamil</label>
+        <input type="email"  name="email_user" placeholder="email">
+        <label>Password</label>
+        <input type="Password"  name="Password" placeholder="Password">
+          <button type="submit" class="btn btn-primary">Register</button>
+
+      </div>
+    </form>
+{% endblock%}

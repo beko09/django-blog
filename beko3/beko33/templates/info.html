@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title%} info{% endblock%}
+{% block content%}
+    <form method="post" action="{% url 'infoback' username %}">
+        {% csrf_token %}
+      <div class="b">
+        <label>job</label>
+        <input type="text"  name="job" placeholder="job">
+        <label>lang</label>
+        <input type="text"  name="lang" placeholder="lang">
+        <label>num</label>
+        <input type="number"  name="num" placeholder="num">
+          <button type="submit" class="btn btn-primary">Register</button>
+
+      </div>
+    </form>
+{% endblock%}

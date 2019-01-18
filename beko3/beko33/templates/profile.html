@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title%} login{% endblock%}
+{% block content %}
+     {% if request.user.is_authenticated %}
+       <h1>wel come to profile {{u}}</h1>
+      
+        <a href="{% url 'logout_backend'%}">logout</a>
+        {%endif%}
+    no profile
+ {% endblock %}

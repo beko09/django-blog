@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title%}page3{%endblock%}
+{% block content%}
+        <h1>creat user</h1>
+
+        <form method="post" action="{% url '4'%}">
+            {% csrf_token %}
+           name: <input type="text"  name="name"> <br>
+          email:  <input type="email"  name="email"> <br>
+           age: <input type="number"  name="age"> <br>
+           date: <input type="date"  name="date"> <br>
+            <input type="submit" value="send to">
+        </form>
+{% endblock%}

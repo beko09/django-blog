@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{%block title%} login{% endblock%}
+{% block content%}
+    <form method="post" action="{% url 'log_backend'%}">
+        {% csrf_token %}
+      <div class="b">
+
+        <label>Username</label>
+        <input type="text"  name="user_name" placeholder="username">
+        <label>Password</label>
+        <input type="Password"  name="Password" placeholder="Password">
+          <button type="submit" class="btn btn-primary">login</button>
+
+      </div>
+    </form>
+{% endblock%}

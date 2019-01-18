@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+{% load static%}
+{% block title %}page2{%endblock%}
+{% block content %}
+     <h1>update her</h1>
+
+        <form method="post" action="{% url 'backend' idform%}">
+            {% csrf_token %}
+           name: <input type="text"  name="name" value="{{data.fullname}}"> <br>
+          email:  <input type="email"  name="email" value="{{data.email}}"> <br>
+           age: <input type="number"  name="age" value="{{data.age}}"> <br>
+           date: <input type="date"  name="date" value="{{data.birthday}}"> <br>
+            <input type="submit" value="update to">
+        </form>
+{% endblock %}
